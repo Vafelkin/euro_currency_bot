@@ -1,5 +1,11 @@
 # Euro Currency Bot 🤖
 
+[![Python Version](https://img.shields.io/badge/python-3.7%2B-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![Telegram](https://img.shields.io/badge/Telegram-Bot-blue.svg)](https://core.telegram.org/bots)
+[![Updates](https://img.shields.io/badge/updates-10%20min-brightgreen.svg)]()
+
 Telegram бот для отслеживания курса евро в обменном пункте на Лиговском проспекте.
 
 ## Возможности
