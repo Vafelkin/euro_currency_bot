@@ -1,0 +1,1197 @@
+<!doctype html>
+<!--[if lt IE 7 ]>
+<html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+<link href="/bitrix/js/ui/design-tokens/dist/ui.design-tokens.min.css?170860389722911" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/js/socialservices/css/ss_admin.min.css?1708603898330" type="text/css"  rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/ligovka/template_17d8df65c7ab51f12ecc8b3a95b35041/template_17d8df65c7ab51f12ecc8b3a95b35041_v1.css?1737099317584" type="text/css"  data-template-style="true" rel="stylesheet" />
+<link href="/bitrix/panel/main/popup.min.css?170860390220774" type="text/css"  data-template-style="true"  rel="stylesheet" />
+<script>if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess==='object'){for(let i in mess) {BX.message[i]=mess[i];} return true;}};</script>
+<script>(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+
+<script src="/bitrix/js/main/core/core.min.js?1708603896223197"></script>
+
+<script>BX.Runtime.registerExtension({'name':'main.core','namespace':'BX','loaded':true});</script>
+<script>BX.setJSList(['/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/core/core_promise.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/loadext/loadext.js','/bitrix/js/main/loadext/extension.js','/bitrix/js/main/polyfill/promise/js/promise.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/includes/js/includes.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/ui/polyfill/closest/js/closest.js','/bitrix/js/main/polyfill/fill/main.polyfill.fill.js','/bitrix/js/main/polyfill/find/js/find.js','/bitrix/js/main/polyfill/matches/js/matches.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/core/core.js','/bitrix/js/main/polyfill/intersectionobserver/js/intersectionobserver.js','/bitrix/js/main/lazyload/dist/lazyload.bundle.js','/bitrix/js/main/polyfill/core/dist/polyfill.bundle.js','/bitrix/js/main/parambag/dist/parambag.bundle.js']);
+</script>
+<script>BX.Runtime.registerExtension({'name':'ui.design-tokens','namespace':'window','loaded':true});</script>
+<script>BX.Runtime.registerExtension({'name':'main.pageobject','namespace':'window','loaded':true});</script>
+<script>(window.BX||top.BX).message({'JS_CORE_LOADING':'Загрузка...','JS_CORE_NO_DATA':'- Нет данных -','JS_CORE_WINDOW_CLOSE':'Закрыть','JS_CORE_WINDOW_EXPAND':'Развернуть','JS_CORE_WINDOW_NARROW':'Свернуть в окно','JS_CORE_WINDOW_SAVE':'Сохранить','JS_CORE_WINDOW_CANCEL':'Отменить','JS_CORE_WINDOW_CONTINUE':'Продолжить','JS_CORE_H':'ч','JS_CORE_M':'м','JS_CORE_S':'с','JSADM_AI_HIDE_EXTRA':'Скрыть лишние','JSADM_AI_ALL_NOTIF':'Показать все','JSADM_AUTH_REQ':'Требуется авторизация!','JS_CORE_WINDOW_AUTH':'Войти','JS_CORE_IMAGE_FULL':'Полный размер'});</script>
+<script>BX.Runtime.registerExtension({'name':'window','namespace':'window','loaded':true});</script>
+<script>(window.BX||top.BX).message({'SS_NETWORK_DISPLAY':'N','SS_NETWORK_URL':'https://www.bitrix24.net/oauth/authorize/?user_lang=ru&client_id=ext.656e21842b4ae1.25806802&redirect_uri=https%3A%2F%2Fligovka.ru%2Fdetailed%2Feur%3Fauth_service_id%3DBitrix24Net%26ELEMENT_ID%3Deur&scope=auth,admin&response_type=code&mode=popup&state=site_id%3Ds1%26backurl%3D%252Fdetailed%252Feur%253Fcheck_key%253D8ad59060d832efc7ef5eb003619d7165%2526ELEMENT_ID%253Deur%26mode%3Dpopup','SS_NETWORK_POPUP_TITLE':'Битрикс24 - Единая авторизация','SS_NETWORK_POPUP_CONNECT':'Подключить','SS_NETWORK_POPUP_TEXT':'<b>Подключите свой Битрикс24<\/b>, используйте один логин и пароль для авторизации на любом вашем сайте.<\/b><br /><br />Больше не нужно помнить разные пароли и логины,<br />Битрикс24 - ваш единый вход.','SS_NETWORK_POPUP_DONTSHOW':'Больше не показывать это сообщение','SS_NETWORK_POPUP_COUNT':'0'});</script>
+<script>BX.Runtime.registerExtension({'name':'socialservices_admin','namespace':'window','loaded':true});</script>
+<script>(window.BX||top.BX).message({'LANGUAGE_ID':'ru','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','UTF_MODE':'Y','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1742067211','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'8aa9a53f93f6dc302061cd0b11c73a6f'});</script>
+
+
+<script  src="/bitrix/cache/js/s1/ligovka/kernel_main/kernel_main_v1.js?1737143998147081"></script>
+<script src="/bitrix/js/socialservices/ss_admin.min.js?17086038981657"></script>
+<script>BX.setJSList(['/bitrix/js/main/pageobject/pageobject.js','/bitrix/js/main/core/core_window.js','/bitrix/js/main/session.js','/bitrix/js/main/date/main.date.js','/bitrix/js/main/core/core_date.js','/bitrix/js/main/utils.js']);</script>
+<script>BX.setCSSList(['/local/templates/ligovka/template_styles.css']);</script>
+
+
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "73e8b3752c9af446bd4e1055ff2a3495"]); _ba.push(["host", "ligovka.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+    <title>Динамика изменения курса за последний месяц &mdash; Центр обмена СКВ Лиговский</title>
+	    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/screen.css">
+    <script src="/scripts/modernizr-1.7.min.js"></script>
+    <script src="/scripts/jquery.js"></script>
+    <script src="/scripts/jquery.stylish-select.min.js"></script>
+    <script src="/scripts/jquery.validator-1.9.0.js"></script>
+    <script src="/scripts/script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	    <!--[if lte IE 8 ]>
+    <script type="text/javascript" src="/scripts/vml.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles/ie.css" media="screen">
+    <![endif]-->
+    <!--[if IE 6 ]>
+    <link rel="stylesheet" type="text/css" href="/styles/ie6.css" media="screen">
+    <script src="/scripts/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix("img, .png_bg");</script>
+    <![endif]-->
+    <style>
+        .cmsForm_errorField {
+            background: #ffe6e5 !important;
+        }
+
+        label.cmsForm_errorField {
+            display: none !important;
+        }
+    </style>
+    <meta http-equiv="refresh" content="180">
+</head>
+<body id="body"
+      class="inner">
+
+<div class="background_container">
+    <div class="fon">
+
+    </div>
+</div>
+<header class="header">
+    <div class="header__bar">
+        <div class="wrapper header__wrapper">
+            <div class="header__inner">
+                <div class="menu header__menu">
+					
+
+            <div class="menu__item ">
+            <a class="menu__link " href="/docs/about.html" title="О компании">
+                <span>О компании</span>
+                            </a>
+        </div>
+            <div class="menu__item ">
+            <a class="menu__link " href="/docs/news.html" title="Новости">
+                <span>Новости</span>
+                            </a>
+        </div>
+            <div class="menu__item ">
+            <a class="menu__link " href="/docs/information.html" title="Информация">
+                <span>Информация</span>
+                            </a>
+        </div>
+            <div class="menu__item menu__item_bold">
+            <a class="menu__link " href="http://transinkass.ru/" title="Охрана">
+                <span>Охрана</span>
+                                    <span>
+                            <svg width="15" height="12" viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg">
+                                <g fill-rule="nonzero" fill="none">
+                                    <path stroke="currentColor" stroke-width="2" d="M8 10.583l5-4.513-5-4.487"></path>
+                                    <path fill="currentColor" d="M0 5h12v2h-12z"></path>
+                                </g>
+                            </svg>
+                        </span>
+                            </a>
+        </div>
+            <div class="menu__item ">
+            <a class="menu__link " href="/docs/contacts.html" title="Контакты">
+                <span>Контакты</span>
+                            </a>
+        </div>
+                    </div>
+                <div class="header__contacts">
+                    <a href="mailto:obmen@ligovka.ru" title="Связаться с нами">obmen@ligovka.ru</a>
+                </div>
+                <div class="lang header__lang">
+					
+
+    
+        <div class="lang__current">
+            <span>Рус</span>
+            <span><svg width="10" height="5" viewBox="0 0 10 5" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l4.012 5 3.988-5" fill-rule="nonzero" stroke="#591E54" fill="none"></path></svg></span>
+        </div>
+    
+    
+    <div class="lang__items">
+    <div class="lang__item"><a href="/en/" title="Eng">Eng</a></div><div class="lang__item"><a href="/ch/" title="中文">中文</a></div></div>                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper header__wrapper header__wrapper_bottom">
+        <div class="header__inner header__inner_bottom">
+            <div class="header__logo" style="position: relative">
+				<a href="/" style="position:absolute; width: 100%; height: 100%;"></a>                <span class="header__image">
+                    <img src="/images/logo_n.png" alt="Центр обмена СКВ Лиговский">
+                </span>
+                <span class="header__title">Центр обмена<br>СКВ Лиговский</span>
+            </div>
+            <div class="header__item">
+	            <div class="header__label">
+ <span class="header__icon">
+ <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.881 5.656c.656-.657.656-1.722 0-2.378l-1.785-1.785c-.657-.657-1.722-.657-2.38 0l-.977.979c-.849.849-.981 2.173-.319 3.175 2.843 4.298 6.636 8.091 10.934 10.935 1 .661 2.329.529 3.175-.319l.978-.979c.657-.657.657-1.722 0-2.378l-1.784-1.784c-.656-.658-1.721-.658-2.379 0l-.595.594c-1.956-1.603-3.86-3.508-5.463-5.465l.595-.594z" stroke="#000" stroke-width="2" fill="none"></path>
+        </svg>
+ </span> <span class="header__text"> <a href="tel:+78123251093" title="Связаться с нами">+7 (812) 325-10-93</a> </span>
+</div>
+<div class="header__desc">
+	<div class="header__element">
+		 <a href="tel:+78123361092" title="Связаться с нами">+7 (812) 336-10-92</a>
+	</div>
+</div>
+<br>            </div>
+            <div class="header__item">
+	            <div class="header__label">
+    <span class="header__icon">
+        <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><g
+                    transform="translate(-745 -97) translate(746 98)" fill-rule="nonzero" fill="none"><circle
+                        stroke="#0F0400" stroke-width="2" cx="6.5" cy="6.5" r="6.5"></circle><path
+                        stroke="#0F0400" d="M5.5 3.5h1v3h-1z"></path><path fill="#0F0400"
+                                                                           d="M5 6h5v2h-5z"></path></g></svg>
+    </span>
+    <span class="header__text">8:45—21:00</span>
+</div>
+<div class="header__desc">
+    <div class="header__element">без перерыва и выходных</div>
+</div>            </div>
+            <div class="header__item">
+	            <div class="header__label">
+    <span class="header__icon">
+        <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path
+                    d="M8.652 17v-7.652h-7.652l16-8.348z" stroke="#000" stroke-width="2" fill="none"></path></svg>
+    </span>
+    <span class="header__text">
+        <a href="https://yandex.ru/maps/-/CDFmmS0d" target="_blank">Лиговский переулок, 2</a>
+    </span>
+</div>	                            <div class="header__desc">
+                    <div class="header__element">
+                        <a href="https://blagodatka.ru/" title="">
+                            <span>Московский проспект, 147</span>
+                            <span>
+                            <svg width="15" height="12" viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg">
+                                <g fill-rule="nonzero" fill="none">
+                                    <path stroke="currentColor" stroke-width="2" d="M8 10.583l5-4.513-5-4.487"></path>
+                                    <path fill="currentColor" d="M0 5h12v2h-12z"></path>
+                                </g>
+                            </svg>
+                        </span>
+                        </a>
+                    </div>
+                    <div class="header__element">
+                        <a href="https://udelka.spb.ru/" title="">
+                            <span>Скобелевский проспект, 12</span>
+                            <span>
+                            <svg width="15" height="12" viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg">
+                                <g fill-rule="nonzero" fill="none">
+                                    <path stroke="currentColor" stroke-width="2" d="M8 10.583l5-4.513-5-4.487"></path>
+                                    <path fill="currentColor" d="M0 5h12v2h-12z"></path>
+                                </g>
+                            </svg>
+                        </span>
+                        </a>
+                    </div>
+                </div>
+                            </div>
+        </div>
+    </div>
+</header>
+<section role="main" class="main_container">
+	    <div class="wrapper">
+        <section class="important_info_container">
+            <article class="text_content">
+				
+
+    <h1>Евро (EUR)</h1>
+    <div class="row">
+        <div class="col-course">
+            <table class="table_course">
+                <tbody>
+                <tr class="actions_with_money">
+                    <td colspan="2"></td>
+                    <td class="buy_col">Покупка</td>
+                    <td class="sale_col">Продажа</td>
+                </tr>
+				                    <tr>
+                        <td class="money_quantity">от 1</td>
+                        <td class="money_icon"><img src="/images/icons/ic-money1.png" alt=""
+                                                    width="22" height="8"></td>
+                        <td class="money_price buy_price">94.60</td>
+						<td class="money_price">96.30</td>
+                    </tr>
+				                    <tr>
+                        <td class="money_quantity">от 1000</td>
+                        <td class="money_icon"><img src="/images/icons/ic-money1000.png" alt=""
+                                                    width="22" height="8"></td>
+                        <td class="money_price buy_price">94.70</td>
+						<td class="money_price">96.20</td>
+                    </tr>
+				                    <tr>
+                        <td class="money_quantity">от 10000</td>
+                        <td class="money_icon"><img src="/images/icons/ic-money10000.png" alt=""
+                                                    width="22" height="8"></td>
+                        <td class="money_price buy_price">94.70</td>
+						<td class="money_price">96.20</td>
+                    </tr>
+				                </tbody>
+            </table>
+        </div>
+        <div class="col-seo">
+            <p>В&nbsp;нашем Центре обмена СКВ &laquo;Лиговский&raquo; вы&nbsp;можете всегда купить или продать евро (EUR) по&nbsp;выгодной цене. Вы&nbsp;можете узнать актуальный курс обмена евро (EUR) у&nbsp;нас на&nbsp;сайте, а&nbsp;так&nbsp;же сделать заказ на&nbsp;евро по&nbsp;телефону (<a href="tel:+78123251093">+7&nbsp;812 325-10-93</a>), при этом заказ будет действителен в&nbsp;течение часа и&nbsp;может быть продлен.</p>            <p class="note">
+				Все курсы имеют информативную цель и ни при каких условиях не являются публичной офертой, определеяемой положением ст. 437(2) ГК РФ.                <br>
+                <br>
+				            </p>
+        </div>
+    </div>
+
+    <!--[if lte IE 8 ]>
+    <script language="javascript" type="text/javascript" src="/scripts/flot/excanvas.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="/scripts/flot/jquery.flot.min.js"></script>
+
+    <h2>Динамика изменения курса евро (EUR)<br>за последний месяц        , усреднённый за день</h2>
+    <br>
+    <div class="switch">
+		            <label class="switch-item">
+                <input class="switch-input" type="radio" name="count" data-type="1">
+                <span class="switch-button is-active">От 1</span>
+            </label>
+		            <label class="switch-item">
+                <input class="switch-input" type="radio" name="count" data-type="1000">
+                <span class="switch-button ">От 1000</span>
+            </label>
+		            <label class="switch-item">
+                <input class="switch-input" type="radio" name="count" data-type="10000">
+                <span class="switch-button ">От 10000</span>
+            </label>
+		    </div>
+	
+	        <table id="detailed1" data-type="1"  class="detailed is-active">
+            <tr>
+                <td class="left_block">
+					                    <table class="frame prices">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>
+                                <div class="down">&darr;</div>
+                            </th>
+                            <th></th>
+                            <th>
+                                <div class="up">&uarr;</div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+						                            <tr>
+                                <td class="col date">15.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">94.83</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">96.65</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">14.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.40</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.40</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">13.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.85</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.75</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">12.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.18</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.88</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">11.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.58</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.28</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">10.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.90</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.30</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">09.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">97.38</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.00</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">08.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">97.85</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.58</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">07.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">98.20</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.93</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">06.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">98.45</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">100.15</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">05.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">97.30</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.28</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">04.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.90</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.65</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">03.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.53</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.48</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">02.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">94.75</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.85</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">01.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">94.88</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.23</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">28.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.28</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.48</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">27.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">94.00</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.48</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">26.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">93.25</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">96.60</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">25.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">93.85</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">96.70</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">24.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.20</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.70</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">23.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.73</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.53</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">22.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.20</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.00</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">21.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.08</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.00</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">20.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.85</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.28</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">19.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">98.23</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">100.95</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">18.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">98.55</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">101.55</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">17.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">99.30</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">102.58</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">16.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">100.10</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">103.13</td>
+                            </tr>
+						                        </tbody>
+                    </table>
+                </td>
+                <td class="right_block">
+                    <div id="chart"></div>
+                </td>
+            </tr>
+        </table>
+	        <table id="detailed1000" data-type="1000"  class="detailed is-active">
+            <tr>
+                <td class="left_block">
+					                    <table class="frame prices">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>
+                                <div class="down">&darr;</div>
+                            </th>
+                            <th></th>
+                            <th>
+                                <div class="up">&uarr;</div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+						                            <tr>
+                                <td class="col date">15.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">94.93</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">96.55</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">14.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.50</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.30</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">13.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.95</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.65</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">12.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.28</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.78</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">11.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.68</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.18</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">10.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">97.00</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.20</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">09.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">97.48</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.90</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">08.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">97.95</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.48</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">07.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">98.30</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.83</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">06.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">98.55</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">100.05</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">05.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">97.40</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.18</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">04.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.00</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.55</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">03.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.63</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.38</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">02.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">94.85</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.75</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">01.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">94.98</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.13</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">28.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.38</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.38</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">27.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">94.10</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.38</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">26.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">93.35</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">96.50</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">25.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">93.95</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">96.60</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">24.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.30</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.60</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">23.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.93</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.33</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">22.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.30</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.90</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">21.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.18</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.90</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">20.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.95</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.18</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">19.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">98.33</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">100.85</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">18.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">98.65</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">101.45</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">17.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">99.40</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">102.48</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">16.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">100.20</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">103.03</td>
+                            </tr>
+						                        </tbody>
+                    </table>
+                </td>
+                <td class="right_block">
+                    <div id="chart2"></div>
+                </td>
+            </tr>
+        </table>
+	        <table id="detailed10000" data-type="10000"  class="detailed is-active">
+            <tr>
+                <td class="left_block">
+					                    <table class="frame prices">
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>
+                                <div class="down">&darr;</div>
+                            </th>
+                            <th></th>
+                            <th>
+                                <div class="up">&uarr;</div>
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody>
+						                            <tr>
+                                <td class="col date">15.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">94.93</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">96.55</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">14.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.50</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.30</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">13.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.95</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.65</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">12.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.28</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.78</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">11.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.68</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.18</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">10.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">97.00</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.20</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">09.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">97.48</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.90</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">08.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">97.95</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.48</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">07.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">98.30</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.83</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">06.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">98.55</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">100.05</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">05.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">97.40</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.18</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">04.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.00</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.55</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">03.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.63</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.38</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">02.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">94.85</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.75</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">01.03.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">94.98</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.13</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">28.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.38</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.38</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">27.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">94.10</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.38</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">26.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">93.35</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">96.50</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">25.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">93.95</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">96.60</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">24.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.30</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">97.60</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">23.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">95.93</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.33</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">22.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.30</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.90</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">21.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.18</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">98.90</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">20.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">96.95</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">99.18</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">19.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">98.33</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">100.85</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">18.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">98.65</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">101.45</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">17.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">99.40</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">102.48</td>
+                            </tr>
+						                            <tr>
+                                <td class="col date">16.02.2025</td>
+                                <td class="scpr"></td>
+                                <td class="col price1">100.20</td>
+                                <td class="scpr"></td>
+                                <td class="col price2">103.03</td>
+                            </tr>
+						                        </tbody>
+                    </table>
+                </td>
+                <td class="right_block">
+                    <div id="chart3"></div>
+                </td>
+            </tr>
+        </table>
+		
+	
+    <script>
+        var options = {
+            legend: {
+                show: false
+            },
+            xaxis: {
+                mode: 'time',
+                timeformat: '%d.%m',
+                minTickSize: [1, 'day']
+            },
+
+            lines: {
+                show: true,
+                lineWidth: 1
+            },
+            colors: ['#5f417f', '#af005f'],
+            shadowSize: 0,
+            grid: {
+                color: '#888888',
+                backgroundColor: null,
+                borderWidth: 0,
+                tickColor: '#ffffff',
+                markings: function (axes) {
+                    var markings = [];
+                    var dividery = axes.yaxis.max / 10;
+
+                    for (var y = Math.floor(axes.yaxis.min); y < axes.yaxis.max; y += dividery)
+                        markings.push({yaxis: {from: y, to: y}});
+
+
+                    var dividerx = axes.xaxis.max / 10000;
+                    for (var x = Math.floor(axes.xaxis.min); x < axes.xaxis.max; x += dividerx)
+                        markings.push({xaxis: {from: x, to: x}});
+
+                    return markings;
+                }
+            }
+        };
+                    var data6 = [
+                {
+                    label: "Покупка",
+                    data: [[1741986000000,94.825],[1741899600000,95.4],[1741813200000,95.85],[1741726800000,96.175],[1741640400000,95.575],[1741554000000,96.9],[1741467600000,97.375],[1741381200000,97.85],[1741294800000,98.2],[1741208400000,98.45],[1741122000000,97.3],[1741035600000,95.9],[1740949200000,95.525],[1740862800000,94.75],[1740776400000,94.875],[1740690000000,95.275],[1740603600000,94],[1740517200000,93.25],[1740430800000,93.85],[1740344400000,95.2],[1740258000000,95.725],[1740171600000,96.2],[1740085200000,96.075],[1739998800000,96.85],[1739912400000,98.225],[1739826000000,98.55],[1739739600000,99.3],[1739653200000,100.1]]
+                }, {
+                    label: "Продажа",
+                    data: [[1741986000000,96.65],[1741899600000,97.4],[1741813200000,97.75],[1741726800000,97.875],[1741640400000,97.275],[1741554000000,98.3],[1741467600000,99],[1741381200000,99.575],[1741294800000,99.925],[1741208400000,100.15],[1741122000000,99.275],[1741035600000,98.65],[1740949200000,98.475],[1740862800000,97.85],[1740776400000,98.225],[1740690000000,98.475],[1740603600000,97.475],[1740517200000,96.6],[1740430800000,96.7],[1740344400000,97.7],[1740258000000,98.525],[1740171600000,99],[1740085200000,99],[1739998800000,99.275],[1739912400000,100.95],[1739826000000,101.55],[1739739600000,102.575],[1739653200000,103.125]]
+                }
+            ];
+        
+        $.plot($("#chart"), data6, options);
+                    var data7 = [
+                {
+                    label: "Покупка",
+                    data: [[1741986000000,94.925],[1741899600000,95.5],[1741813200000,95.95],[1741726800000,96.275],[1741640400000,95.675],[1741554000000,97],[1741467600000,97.475],[1741381200000,97.95],[1741294800000,98.3],[1741208400000,98.55],[1741122000000,97.4],[1741035600000,96],[1740949200000,95.625],[1740862800000,94.85],[1740776400000,94.975],[1740690000000,95.375],[1740603600000,94.1],[1740517200000,93.35],[1740430800000,93.95],[1740344400000,95.3],[1740258000000,95.925],[1740171600000,96.3],[1740085200000,96.175],[1739998800000,96.95],[1739912400000,98.325],[1739826000000,98.65],[1739739600000,99.4],[1739653200000,100.2]]
+                }, {
+                    label: "Продажа",
+                    data: [[1741986000000,96.55],[1741899600000,97.3],[1741813200000,97.65],[1741726800000,97.775],[1741640400000,97.175],[1741554000000,98.2],[1741467600000,98.9],[1741381200000,99.475],[1741294800000,99.825],[1741208400000,100.05],[1741122000000,99.175],[1741035600000,98.55],[1740949200000,98.375],[1740862800000,97.75],[1740776400000,98.125],[1740690000000,98.375],[1740603600000,97.375],[1740517200000,96.5],[1740430800000,96.6],[1740344400000,97.6],[1740258000000,98.325],[1740171600000,98.9],[1740085200000,98.9],[1739998800000,99.175],[1739912400000,100.85],[1739826000000,101.45],[1739739600000,102.475],[1739653200000,103.025]]
+                }
+            ];
+        
+        $.plot($("#chart2"), data7, options);
+                    var data8 = [
+                {
+                    label: "Покупка",
+                    data: [[1741986000000,94.925],[1741899600000,95.5],[1741813200000,95.95],[1741726800000,96.275],[1741640400000,95.675],[1741554000000,97],[1741467600000,97.475],[1741381200000,97.95],[1741294800000,98.3],[1741208400000,98.55],[1741122000000,97.4],[1741035600000,96],[1740949200000,95.625],[1740862800000,94.85],[1740776400000,94.975],[1740690000000,95.375],[1740603600000,94.1],[1740517200000,93.35],[1740430800000,93.95],[1740344400000,95.3],[1740258000000,95.925],[1740171600000,96.3],[1740085200000,96.175],[1739998800000,96.95],[1739912400000,98.325],[1739826000000,98.65],[1739739600000,99.4],[1739653200000,100.2]]
+                }, {
+                    label: "Продажа",
+                    data: [[1741986000000,96.55],[1741899600000,97.3],[1741813200000,97.65],[1741726800000,97.775],[1741640400000,97.175],[1741554000000,98.2],[1741467600000,98.9],[1741381200000,99.475],[1741294800000,99.825],[1741208400000,100.05],[1741122000000,99.175],[1741035600000,98.55],[1740949200000,98.375],[1740862800000,97.75],[1740776400000,98.125],[1740690000000,98.375],[1740603600000,97.375],[1740517200000,96.5],[1740430800000,96.6],[1740344400000,97.6],[1740258000000,98.325],[1740171600000,98.9],[1740085200000,98.9],[1739998800000,99.175],[1739912400000,100.85],[1739826000000,101.45],[1739739600000,102.475],[1739653200000,103.025]]
+                }
+            ];
+        
+        $.plot($("#chart3"), data8, options);
+                $(document).ready(function () {
+            $('.switch-button.is-active').removeClass('is-active').trigger('click');
+        });
+    </script>
+	
+	        <div>
+			<p>
+</p>
+<p>
+	 Наш обменный пункт «Лиговский» предлагает вам самый выгодный курс обмена евро на рубли и иностранные валюты. Актуальный курс евро к рублю всегда доступен на нашем сайте. Увидели выгодное предложение — звоните по телефону +7 812 325-10-93: при заказе от 1000 евро мы зафиксируем данный курс обмена для вас на час.
+</p>
+<p>
+	 1 евро содержит 100 евроцентов. <a href="https://www.ecb.europa.eu/euro/banknotes/html/index.en.html">Ссылка на страницу сайта Европейского Центробанка с описанием банкнот евро</a>. Напоминаем, наш Центр обмена не работает с валютными монетами!
+</p>
+<p>
+	 Евро — официальная валюта для стран Европейского союза, среди которых Франция, Литва, Германия, Испания и ряд других государств. Кроме того, европейской валютой расплачиваются еще несколько стран, вот только они не могут влиять на денежную политику Европейского центрального банка, который помимо прочего занимается эмиссией евро. На сайте банка вы можете узнавать все актуальные новости об изменениях евро онлайн.
+</p>
+<p>
+	 ЦБ РФ устанавливает курс евро на сегодня, основываясь на принятом курсе доллара после торгов. Иными словами, Центральный банк России следит за торгами на бирже и, опираясь на них, назначает курсы валют на следующий день. На основе данных Центробанка РФ обменные пункты и предлагают курс обмена евро.
+</p>
+<p>
+	 На сайте ЦО СКВ «Лиговский» у вас есть возможность посмотреть динамику изменения валюты и узнать стоимость обмена евро в рубли на сегодня. Мы всегда предложим вам лучший курс, чтобы вы могли купить либо продать евро по самой выгодной цене. Наш центр находится рядом со станцией метро «Площадь Восстания».
+</p>
+<p>
+</p>        </div>
+	    
+
+
+        </article>
+    </section>
+</div>
+
+<footer>
+    <div class="wrapper">
+        <div class="clearfix">
+                    <div>
+                <p align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.avangard.ru/rus/private/preciousmetal/goldbrick/" target="_blank"><img src="/images/backgrounds/Gold_Ingots_1300x335_2.png" width="1200" height="310"></a><p>
+            </div><br>
+            <div class="ligovka_ozerki">
+                <h1><a href="http://udelka.spb.ru" target="_blank">Лиговка<br>для наших клиентов<br>на севере города</a></h1>
+                <p>Скобелевский пр.,<br> дом 12</p>
+            </div>
+
+            <div class="blagodatka">
+                <h3><a href="http://blagodatka.ru/" target="_blank">Центр обмена СКВ<br>«Благодатный»</a></h3>
+                <p>Московский  проспект,<br>дом 147</p>
+            </div>
+                </div>
+        <table class="borderless" id="counters">
+            <colgroup>
+                <col style="width: 110px;">
+                <col style="width: 133px;">
+                <col style="width: 133px;">
+                <col style="width: 133px;">
+                <col style="width: 88px;">
+            </colgroup>
+            <tr>
+                <td>
+                    Счетчики                </td>
+                <td>
+                    <!-- HotLog -->
+<!--
+                    <script language="javascript">
+                        hotlog_js="1.0";
+                        hotlog_r=""+Math.random()+"&s=274924&im=132&r="+escape(document.referrer)+"&pg="+escape(window.location.href);
+                        document.cookie="hotlog=1; path=/"; hotlog_r+="&c="+(document.cookie?"Y":"N");
+                    </script>
+                    <script language="javascript1.1">
+                        hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")
+                    </script>
+                    <script language="javascript1.2">
+                        hotlog_js="1.2";
+                        hotlog_r+="&wh="+screen.width+'x'+screen.height+"&px="+
+                            (((navigator.appName.substring(0,3)=="Mic"))?
+                                screen.colorDepth:screen.pixelDepth)</script>
+                    <script language="javascript1.3">hotlog_js="1.3"</script>
+                    <script language="javascript">hotlog_r+="&js="+hotlog_js;
+                        document.write("<a href='http://click.hotlog.ru/?274924' target='_top'><img "+" src='https://hit10.hotlog.ru/cgi-bin/hotlog/count?"+hotlog_r+"&' border=0 width=88 height=31 alt=HotLog></a>")</script>
+                    <noscript><a href=http://click.hotlog.ru/?274924 target=_top><img
+                                src="https://hit10.hotlog.ru/cgi-bin/hotlog/count?s=274924&im=132" border=0
+                                width="88" height="31" alt="HotLog"></a></noscript>
+-->
+                    <!-- /HotLog -->
+                </td>
+                <td>
+                    <!--begin of Top100-->
+<!--
+                    <a href="http://top100.rambler.ru/top100/"><img src="https://counter.rambler.ru/top100.cnt?846351" alt="Rambler's Top100" width=1 height=1 border=0></a>
+                    <a href="http://top100.rambler.ru/top100/"><img src="https://counter.rambler.ru/top100.scn?2811817&rn=542863633&v=0.3i&bs=1440x734&ce=1&rf=http%3A%2F%2Fligovka.ru%2F&en=UTF-8&pt=%D0%A6%D0%B5%D0%BD%D1%82%D1%80%20%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD%D0%B0%20%D0%A1%D0%9A%D0%92%20%D0%91%D0%BB%D0%B0%D0%B3%D0%BE%D0%B4%D0%B0%D1%82%D0%BD%D1%8B%D0%B9%20-%20%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD%20%D0%B2%D0%B0%D0%BB%D1%8E%D1%82%D1%8B&cd=24-bit&sr=1440x900&la=ru&ja=0&acn=Mozilla&an=Netscape&pl=MacIntel&tz=-180&fv=22.0%20r0&sv&le=0" alt="Rambler's Top100" width=88 height=31 border=0></a>
+-->
+                    <!--end of Top100 -->
+                </td>
+                <td>
+                    <!--Rating@Mail.ru COUNTER--><script language="JavaScript"
+                                                         type="text/javascript"><!--
+                        d=document;var a='';a+=';r='+escape(d.referrer)
+                        js=10//--></script><script language="JavaScript1.1"
+                                                   type="text/javascript"><!--
+                            a+=';j='+navigator.javaEnabled()
+                            js=11//--></script><script language="JavaScript1.2"
+                                                       type="text/javascript"><!--
+                        s=screen;a+=';s='+s.width+'*'+s.height
+                        a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+                        js=12//--></script><script language="JavaScript1.3"
+                                                   type="text/javascript"><!--
+                            js=13//--></script><script language="JavaScript"
+                                                       type="text/javascript"><!--
+                        d.write('<a href="http://top.mail.ru/jump?from=1028524"'+
+                            ' target=_top><img src="https://top-fwz1.mail.ru/counter'+
+                            '?id=1028524;t=134;js='+js+a+';rand='+Math.random()+
+                            '" alt="Рейтинг@Mail.ru"'+' border=0 height=40 width=88/><\/a>')
+                        if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+                            target=_top href="http://top.mail.ru/jump?from=1028524"><img
+                                src="https://top-fwz1.mail.ru/counter?js=na;id=1028524;t=134"
+                                border=0 height=40 width=88
+                                alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript"
+                                                                              type="text/javascript"><!--
+                        if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+                </td>
+                <td>
+                    <!--LiveInternet counter--><script type="text/javascript">document.write('<a href="http://www.liveinternet.ru/click" target=_blank><img src="https://counter.yadro.ru/hit?t18.5;r' + escape(document.referrer) + ((typeof(screen)=='undefined')?'':';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ';u' + escape(document.URL) + ';' + Math.random() + '" border=0 width=88 height=31 alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодн\я"><\/a>')</script><!--/LiveInternet-->
+                </td>
+            </tr>
+        </table>
+        <div class="footer-links">
+            <p class="copyright">
+                ©&nbsp;2011-2024<br>
+<a href="mailto:obmen@ligovka.ru">obmen@ligovka.ru</a>            </p>
+            <p class="mobile_version_link"><a href="/pda/">Мобильная<br>версия</a></p>
+            <p class="nimax_container"><a href="http://nimax.ru/" target="_blank">Создание сайта:</a>&nbsp;Nimax</p>
+        </div>
+
+    </div>
+</footer>
+
+</section>
+
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24006879-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type =
+            'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
+            'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+    (function(w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter7537411 = new Ya.Metrika({id:7537411, enableAll: true});
+            }
+            catch(e) { }
+        });
+    })(window, 'yandex_metrika_callbacks');
+</script></div>
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/7537411" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</body>
+</html>
