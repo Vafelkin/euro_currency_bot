@@ -6,7 +6,7 @@
 [![Telegram](https://img.shields.io/badge/Telegram-Bot-blue.svg)](https://core.telegram.org/bots)
 [![Updates](https://img.shields.io/badge/updates-10%20min-brightgreen.svg)]()
 
-Telegram бот для отслеживания курса евро в обменном пункте на Лиговском проспекте. Бот публичный - любой пользователь может начать с ним взаимодействовать, просто найдя его в Telegram по имени @EuroLig_bot.
+Telegram бот для отслеживания курса евро в обменном пункте на Лиговском проспекте. Бот публичный - любой пользователь может начать с ним взаимодействовать, просто найдя его в Telegram.
 
 ## Возможности
 
