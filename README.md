@@ -15,6 +15,8 @@ Telegram бот для отслеживания курса евро в обме�
 - 💰 Информация о курсах покупки и продажи
 - 🔐 Безопасное хранение данных в .env файле
 - 📈 Отслеживание изменений курса с точностью до копейки
+- 🤖 Автоматическое определение пользователей
+- 🔄 Автоматический перезапуск при сбоях
 
 ## Установка
 
@@ -32,18 +34,55 @@ pip install -r requirements.txt
 3. Создайте файл `.env` и добавьте необходимые переменные:
 ```env
 TELEGRAM_BOT_TOKEN=your_bot_token
-TELEGRAM_CHAT_ID=your_chat_id
 UPDATE_INTERVAL=600
 ```
 
 ## Использование
 
+### Локальный запуск
 1. Запустите бота:
 ```bash
 python main.py
 ```
 
-2. В Telegram доступны следующие команды:
+### Запуск как systemd сервис (для Linux)
+1. Создайте файл сервиса:
+```bash
+sudo nano /etc/systemd/system/euro-currency-bot.service
+```
+
+2. Добавьте следующее содержимое:
+```ini
+[Unit]
+Description=Euro Currency Telegram Bot
+After=network.target
+
+[Service]
+Type=simple
+User=your_username
+WorkingDirectory=/path/to/euro_currency_bot
+ExecStart=/usr/bin/python3 main.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+```
+
+3. Активируйте и запустите сервис:
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable euro-currency-bot
+sudo systemctl start euro-currency-bot
+```
+
+4. Проверьте статус:
+```bash
+sudo systemctl status euro-currency-bot
+```
+
+## Команды в Telegram
+
 - `/start` - Начать работу с ботом
 - Кнопка "💶 Курс евро" - Получить текущий курс
 

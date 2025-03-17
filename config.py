@@ -6,7 +6,6 @@ load_dotenv()
 
 # Настройки Telegram бота
 TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
-TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID', '').split(',')
 
 # Интервал обновления курса в секундах (1 час = 3600 секунд)
 UPDATE_INTERVAL = 600
