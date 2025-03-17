@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
 from config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, UPDATE_INTERVAL, RATE_MESSAGE_TEMPLATE
+from pytz import timezone
 
 # Настройка логирования
 logging.basicConfig(
@@ -79,6 +80,9 @@ parser = EuroRateParser()
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Обработчик команды /start"""
+    chat_id = update.effective_chat.id
+    if chat_id not in context.job.data:
+        context.job.data.append(chat_id)
     await update.message.reply_text(
         'Привет! Я бот для отслеживания курса евро. Нажмите на кнопку "💶 Курс евро" для получения текущего курса.',
         reply_markup=KEYBOARD
@@ -94,7 +98,7 @@ async def get_rate(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     rates = parser.get_rate()
     if rates and len(rates) == 3:
         buy_rate, sell_rate, _ = rates  # Игнорируем флаг изменения для ручного запроса
-        current_time = datetime.now().strftime("%H:%M:%S")
+        current_time = datetime.now(timezone('Europe/Moscow')).strftime("%H:%M:%S")
         await update.message.reply_text(
             RATE_MESSAGE_TEMPLATE.format(
                 buy_rate=buy_rate,
@@ -115,16 +119,17 @@ async def send_rate_update(context: ContextTypes.DEFAULT_TYPE) -> None:
     if rates and len(rates) == 3:
         buy_rate, sell_rate, rate_changed = rates
         if rate_changed:  # Отправляем сообщение только если курс изменился
-            current_time = datetime.now().strftime("%H:%M:%S")
+            current_time = datetime.now(timezone('Europe/Moscow')).strftime("%H:%M:%S")
             message = f"❗️ Обнаружено изменение курса!\n\n" + RATE_MESSAGE_TEMPLATE.format(
                 buy_rate=buy_rate,
                 sell_rate=sell_rate,
                 time=current_time
             )
-            await context.bot.send_message(
-                chat_id=TELEGRAM_CHAT_ID,
-                text=message
-            )
+            for chat_id in context.job.data:
+                await context.bot.send_message(
+                    chat_id=chat_id,
+                    text=message
+                )
 
 def main() -> None:
     # Проверяем наличие токена
@@ -132,10 +137,6 @@ def main() -> None:
         logger.error("Не задан токен бота в переменных окружения!")
         sys.exit(1)
         
-    if not TELEGRAM_CHAT_ID:
-        logger.error("Не задан ID чата в переменных окружения!")
-        sys.exit(1)
-
     # Создаем приложение
     application = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
 
@@ -146,7 +147,7 @@ def main() -> None:
 
     # Добавляем задачу на регулярное обновление курса
     job_queue = application.job_queue
-    job_queue.run_repeating(send_rate_update, interval=UPDATE_INTERVAL, first=1)
+    job_queue.run_repeating(send_rate_update, interval=UPDATE_INTERVAL, first=1, data=[])
 
     # Запускаем бота
     application.run_polling(allowed_updates=Update.ALL_TYPES)

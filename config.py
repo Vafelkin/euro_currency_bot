@@ -9,7 +9,7 @@ TELEGRAM_BOT_TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 TELEGRAM_CHAT_ID = os.getenv('TELEGRAM_CHAT_ID', '').split(',')
 
 # Интервал обновления курса в секундах (1 час = 3600 секунд)
-UPDATE_INTERVAL = int(os.getenv('UPDATE_INTERVAL', 3600))
+UPDATE_INTERVAL = 600
 
 # Шаблон сообщения для отправки курса
 RATE_MESSAGE_TEMPLATE = """
