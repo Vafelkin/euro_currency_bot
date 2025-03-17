@@ -84,7 +84,6 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if chat_id not in context.job.data:
         context.job.data.append(chat_id)
     await update.message.reply_text(
-        'Привет! Я бот для отслеживания курса евро. Нажмите на кнопку "💶 Курс евро" для получения текущего курса.',
         reply_markup=KEYBOARD
     )
 
